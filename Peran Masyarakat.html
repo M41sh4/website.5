@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PEKA - Memahami Anak Berkebutuhan Khusus</title>
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+   <header class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"> 
+                    <img src="Picture/logo.png" alt="Logo PEKA"> 
+                    PEKA
+                </a>
+            </div>
+
+            <i class="fa-solid fa-bars" onclick="showMenu()" id="menuOpen"></i>
+            
+            <nav class="nav-links" id="navLinks">
+                <i class="fa-solid fa-xmark" onclick="hideMenu()" id="menuClose"></i>
+                
+                <a href="index.html">Home</a> 
+                
+                <a href="apa-itu-abk.html" >Apa Itu ABK</a>
+                <a href="jenis-abk.html">Jenis ABK</a>
+                
+                <a href="solusi-dan-dukungan.html">Solusi dan Dukungan</a> 
+                <a href="kisah-inspiratif.html">Kisah Inspiratif</a>
+               </nav>
+                
+        </div>
+    </header>
+    <section class="hero-section">
+        <div class="hero-overlay"></div> 
+        <div class="hero-content container">
+            <h1 class="hero-title">MEMAHAMI ANAK BERKEBUTUHAN KHUSUS (ABK)</h1>
+            <p class="hero-description">
+            Edukasi yang mendalam dan empati adalah langkah pertama menuju pendidikan inklusif yang sejati.
+            </p>
+        </div>
+    </section>
+
+    <section class="main-content school-role-section">
+        <div class="container">
+            <h1 class="main-title">🏘️ Peran Masyarakat: Penguat Mental dan Sosial ABK</h1>
+            <p class="main-description">Dukungan sosial dari masyarakat merupakan penguat mental dan perkembangan ABK yang sangat besar. Inklusi sejati dimulai dari penerimaan di lingkungan sekitar.</p>
+
+            
+            <div class="role-card institution-role">
+                <h3 class="card-title-colored"><i class="fa-solid fa-hand-holding-heart"></i> Peran Masyarakat dalam Inklusi</h3>
+                <ul>
+                    <li>Menghindari Stigma: Tidak memberikan stigma, ejekan, atau membedakan. Fokus pada kemampuan, bukan keterbatasan.</li>
+                    <li>Menciptakan Lingkungan Inklusif: Membuat lingkungan fisik dan sosial yang ramah terhadap perbedaan, memudahkan akses dan partisipasi.</li>
+                    <li>Melibatkan ABK: Secara aktif mengajak ABK ikut serta dalam kegiatan sosial, keagamaan, dan kemasyarakatan yang sesuai.</li>
+                    <li>Memberi Dukungan Sosial: Memberikan dukungan emosional, informasi, dan bantuan praktis bagi keluarga ABK yang menghadapi tantangan pengasuhan.</li>
+                </ul>
+            </div>
+           
+             <div style="text-align: center; margin-top: 60px;">
+                <a href="solusi-dan-dukungan.html" class="explore-btn">Kembali Ke Solusi dan Dukungan →</a>
+            </div>
+            
+        </div>
+    </section>
+    
+    <section class="footer">
+        <h4>Hubungi Kami</h4>
+        <p>Kami terbuka untuk mendengarkan kebutuhan Anda dan berkolaborasi dalam mendukung anak Anda.</p>
+        <div class="icons">
+            <i class="fa-solid fa-envelope"></i> 
+            
+            
+        </div>
+        <p>Dibuat dengan <i class="fa-solid fa-heart"></i> untuk Komunitas Inklusif</p>
+    </section>
+
+    <script>
+        var navLinks = document.getElementById("navLinks");
+        var menuOpenIcon = document.getElementById("menuOpen");
+        var menuCloseIcon = document.getElementById("menuClose");
+
+        function showMenu(){
+            navLinks.style.right = "0"; 
+            menuOpenIcon.style.display = "none"; 
+            setTimeout(function() { menuCloseIcon.style.display = "block"; }, 300); 
+        }
+
+        function hideMenu(){
+            navLinks.style.right = "-250px"; 
+            menuOpenIcon.style.display = "block"; 
+            menuCloseIcon.style.display = "none";
+        }
+        
+        function checkScreenSize() {
+             if (window.innerWidth > 768) {
+                 navLinks.style.right = '0';
+                 menuOpenIcon.style.display = "none"; 
+                 menuCloseIcon.style.display = "none";
+            } else {
+                navLinks.style.right = '-250px';
+                menuOpenIcon.style.display = "block";
+                menuCloseIcon.style.display = "none";
+            }
+        }
+        checkScreenSize();
+        window.addEventListener('resize', checkScreenSize);
+    </script>
+    
+</body>
+</html>
